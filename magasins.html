@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Magasins</title>
+    <style>
+        html, body {
+            height: 100% !important;
+            margin: 0;
+        }
+        
+        .main-container {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #3C3C3C;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 25px;
+            margin: 0;
+            background-color: #D11F11;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 15px;
+        }
+
+        header nav ul li a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        .stores {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            flex: 1;
+        }
+
+        .store {
+            flex: 1;
+            background-color: #575757;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            min-width: 300px;
+        }
+
+        .store img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .store h2 {
+            margin-top: 20px;
+        }
+
+        .store a {
+            margin: 10px 0;
+            color: aliceblue;
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .hours-table th,
+        .hours-table td {
+            border: 1px solid #555;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .hours-table th {
+            background-color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .stores {
+                flex-direction: column;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+<div class="main-container">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/a-propos">À propos de nous</a></li>
+                <li><a href="/vin-du-moment">Vin du moment</a></li>
+                <li><a href="/magasins">Nos magasins</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="stores">
+        <div class="store">
+            <img src="images/MapDevecey.png" alt="Invino - Devecey">
+            <h2>Invino - Devecey</h2>
+            <a href="https://maps.app.goo.gl/JFeYDDF4fsrqtURM7">Rte de Bonnay, 25870 Devecey, France (Galerie marchande intérieure du Super U)</a>
+            <p>+33 3 81 60 53 71</p>
+            <table class="hours-table">
+                <thead>
+                <tr>
+                    <th>Jour</th>
+                    <th>Heures d'ouverture</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Lundi</td>
+                    <td>9h00 - 18h00</td>
+                </tr>
+                <tr>
+                    <td>Mardi</td>
+                    <td>9h00 - 18h00</td>
+                </tr>
+                <tr>
+                    <td>Mercredi</td>
+                    <td>9h00 - 18h00</td>
+                </tr>
+                <tr>
+                    <td>Jeudi</td>
+                    <td>9h00 - 18h00</td>
+                </tr>
+                <tr>
+                    <td>Vendredi</td>
+                    <td>9h00 - 20h00</td>
+                </tr>
+                <tr>
+                    <td>Samedi</td>
+                    <td>10h00 - 18h00</td>
+                </tr>
+                <tr>
+                    <td>Dimanche</td>
+                    <td>Fermé</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="store">
+            <img src="images/MapPouilley.png" alt="Invino - Pouilley-les-vignes">
+            <h2>Invino - Pouilley-les-vignes</h2>
+            <a href="https://maps.app.goo.gl/d6KLMGnyLPZtS61a7">Z.A. les Salines, Pouilley-les-Vignes, France (Galerie marchande intérieure du Super U)</a>
+            <p>+33 9 67 39 13 57</p>
+            <table class="hours-table">
+                <thead>
+                <tr>
+                    <th>Jour</th>
+                    <th>Heures d'ouverture</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Lundi</td>
+                    <td>10h00 - 19h00</td>
+                </tr>
+                <tr>
+                    <td>Mardi</td>
+                    <td>10h00 - 19h00</td>
+                </tr>
+                <tr>
+                    <td>Mercredi</td>
+                    <td>10h00 - 19h00</td>
+                </tr>
+                <tr>
+                    <td>Jeudi</td>
+                    <td>10h00 - 19h00</td>
+                </tr>
+                <tr>
+                    <td>Vendredi</td>
+                    <td>10h00 - 21h00</td>
+                </tr>
+                <tr>
+                    <td>Samedi</td>
+                    <td>11h00 - 19h00</td>
+                </tr>
+                <tr>
+                    <td>Dimanche</td>
+                    <td>Fermé</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 Invino. Tous droits réservés.</p>
+    </footer>
+</div>
+</body>
+
+</html>

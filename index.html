@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
     <style>
+        html, body {
+            height: 100% !important;
+            margin: 0;
+        }
+        
         .main-container {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             color: white;
@@ -16,7 +21,7 @@
             display: flex;
             justify-content: center;
             list-style-type: none;
-            padding: 10px;
+            padding: 25px;
             margin: 0;
             background-color: #D11F11;
         }
@@ -91,13 +96,12 @@
         }
 
         .product-image {
-            flex: 1;
+            height: 400px;
         }
 
         .product-image img {
             width: 100%;
-            height: auto;
-            border-radius: 10px;
+            height: 100%;
         }
 
         .product-description {
@@ -126,7 +130,7 @@
                 <li><a href="/">Accueil</a></li>
                 <li><a href="/a-propos">À propos de nous</a></li>
                 <li><a href="/selection-de-la-semaine">Vin du moment</a></li>
-                <li><a href="/nos-magasin">Nos magasins</a></li>
+                <li><a href="/magasins">Nos magasins</a></li>
             </ul>
         </nav>
     </header>
@@ -141,7 +145,7 @@
 
     <section class="products">
         <div class="product-image">
-            <img src="images/Panier.jpg" alt="Produits en magasin">
+            <img src="images/Panier.jpg" alt="Produits en magasin" style="border-bottom-left-radius: 10px; border-top-left-radius: 10px">
         </div>
         <div class="product-description">
             <h2>Nos Produits</h2>
@@ -161,12 +165,12 @@
             </div>
         </div>
         <div class="product-image">
-            <img src="images/Equipe.jpg" alt="Notre équipe">
+            <img src="images/Equipe.jpg" alt="Notre équipe" style="border-bottom-right-radius: 10px; border-top-right-radius: 10px">
         </div>
     </section>
 
     <footer>
-        <p>© 2024 Nom de la Société. Tous droits réservés.</p>
+        <p>© 2024 Invino. Tous droits réservés.</p>
     </footer>
 </div>
 </body>
