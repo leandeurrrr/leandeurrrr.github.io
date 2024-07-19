@@ -10,7 +10,7 @@
             height: 100% !important;
             margin: 0;
         }
-        
+
         .main-container {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             color: white;
@@ -19,6 +19,7 @@
 
         header nav ul {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             list-style-type: none;
             padding: 25px;
@@ -89,24 +90,48 @@
 
         .products {
             display: flex;
+            /*flex-wrap: wrap;*/
             align-items: center;
             margin: 20px;
             background-color: #222222;
             border-radius: 10px;
         }
 
+        .products-left .product-image {
+            order: 1;
+        }
+
+        .products-left .product-description {
+            order: 2;
+        }
+
+        .products-right {
+            flex-direction: row-reverse;
+        }
+
+        .products-right .product-image {
+            order: 1;
+        }
+
+        .products-right .product-description {
+            order: 2;
+        }
+
         .product-image {
+            flex: 1 1 100%;
             height: 400px;
         }
 
         .product-image img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
         }
 
         .product-description {
-            flex: 2;
+            flex: 2 1 100%;
             margin-left: 20px;
+            padding: 20px;
         }
 
         .product-description h2 {
@@ -118,6 +143,39 @@
             padding: 10px;
             background-color: #333;
             color: white;
+        }
+
+        @media (max-width: 768px) {
+            .banner {
+                height: 200px;
+                font-size: 36px;
+            }
+
+            .intro {
+                margin: 5%;
+            }
+
+            .products {
+                flex-direction: column;
+            }
+
+            .product-image {
+                height: 200px;
+            }
+
+            .product-description {
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header nav ul li {
+                margin: 0 5px;
+            }
+
+            .btn {
+                padding: 5px 10px;
+            }
         }
     </style>
 </head>
@@ -143,7 +201,7 @@
         <p>Invino est une cave à vin prestigieuse où des sommeliers de formation sont présents pour vous conseiller. Que vous soyez amateur de vin ou connaisseur averti, notre équipe dévouée vous aide à choisir le vin parfait pour chaque occasion. Découvrez notre sélection exceptionnelle et laissez-vous guider par notre expertise pour une expérience inoubliable.</p>
     </section>
 
-    <section class="products">
+    <section class="products products-left">
         <div class="product-image">
             <img src="images/Panier.jpg" alt="Produits en magasin" style="border-bottom-left-radius: 10px; border-top-left-radius: 10px">
         </div>
@@ -156,7 +214,7 @@
         </div>
     </section>
 
-    <section class="products">
+    <section class="products products-right">
         <div class="product-description">
             <h2>Notre équipe</h2>
             <p>Notre équipe est composée de sommeliers de formation qui sauront vous conseiller et répondre à vos questions. (j'ai pas trouvé de photo ou tu étais dessus...)</p>
